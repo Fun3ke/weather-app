@@ -1,0 +1,131 @@
+.intro {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.video-media {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 22%;
+}
+body {
+  background: #c5daeb;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: small;
+}
+
+#search-form {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  margin: 15px 50px 10px 127px;
+  max-width: 600px;
+  border-radius: 10px 0px 0px 10px;
+  height: 40px;
+  width: 60%;
+}
+#search-button,
+#location-button {
+  background: #68b9fc;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px 6px 12px;
+  margin: 5px 0px 6px 15px;
+
+  width: 80px;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 2px 3px 8px 0;
+  cursor: pointer;
+}
+#search-button:hover,
+#location-button:hover {
+  background: #fff;
+  color: #68b9fc;
+  border: 1px solid #68b9fc;
+}
+
+.current-weather {
+  background-color: rgb(241, 245, 248);
+  border: 2px solid;
+  border-radius: 6px;
+  border-color: #68b9fc;
+  margin: 0 58px 15px;
+  padding: 10px 20px 0;
+  width: 77%;
+}
+.block {
+  text-align: center;
+}
+.current-weather .current-time {
+  display: block;
+  padding: 0 13px;
+  font-size: x-large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.current-weather .city {
+  font-weight: 400;
+  font-size: x-large;
+  text-decoration: underline;
+}
+.current-weather .weather-description,
+.temperature {
+  font-size: large;
+}
+#current-temperature {
+  font-size: larger;
+}
+
+.current-weather .temperature-feels {
+  font-size: large;
+  text-align: center;
+  text-decoration: underline;
+}
+.current-weather .factors-row {
+  font-size: medium;
+  text-align: center;
+}
+.week-forecast {
+  text-align: center;
+  width: 90%;
+  background-color: rgb(241, 245, 248);
+  border: 2px solid;
+  border-color: #68b9fc;
+  border-radius: 6px;
+  padding: 10px 20px 5px;
+  margin: -16px 9px 10px;
+}
+.week-forecast .forecast-temperature {
+  width: 300px;
+}
+.week-forecast.h6 {
+  font-size: medium;
+}
+.source {
+  text-align: center;
+  margin: 0px 50px 0px 0px;
+  color: #cbd6e0;
+}
+.source .link {
+  color: #fff;
+  text-decoration: none;
+}
+.source .link:hover {
+  text-decoration: underline;
+}
