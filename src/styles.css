@@ -62,7 +62,7 @@ body {
 }
 
 .current-weather {
-  background-color: rgb(241, 245, 248);
+  background-color: rgb(214 237 255);
   border: 2px solid;
   border-radius: 6px;
   border-color: #68b9fc;
@@ -104,7 +104,7 @@ body {
 .week-forecast {
   text-align: center;
   width: 90%;
-  background-color: rgb(241, 245, 248);
+  background-color: rgb(214 237 255);
   border: 2px solid;
   border-color: #68b9fc;
   border-radius: 6px;

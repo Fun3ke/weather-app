@@ -58,6 +58,12 @@ function showPosition(response) {
   ).innerHTML = `${response.data.main.pressure}mb`;
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].main;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].main);
 }
 function searchCity(city) {
   let apiKey = "bb0df6985c2eab6a171d64a6bacbb4e1";
