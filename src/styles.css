@@ -91,6 +91,13 @@ body {
 #current-temperature {
   font-size: larger;
 }
+.degrees-measurment .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+a {
+  text-decoration: none;
+}
 
 .current-weather .temperature-feels {
   font-size: large;
