@@ -35,7 +35,7 @@ if (minute < 10) {
   minute = `0${minute}`;
 }
 currentTime.innerHTML = `${day} | ${month} ${date} | ${hour}:${minute}`;
-//
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -48,6 +48,7 @@ function getForecast(coordinates) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
+
 function showPosition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   celsiusTemperature = response.data.main.temp;
@@ -79,22 +80,24 @@ function showPosition(response) {
 
   getForecast(response.data.coord);
 }
+
 function searchCity(city) {
   let apiKey = "bb0df6985c2eab6a171d64a6bacbb4e1";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showPosition);
 }
+
 function search(event) {
   event.preventDefault();
   let city = document.querySelector("#city-search-input").value;
   searchCity(city);
 }
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 searchCity("Kyiv");
 
-//
 function searchLocation(position) {
   let apiKey = "bb0df6985c2eab6a171d64a6bacbb4e1";
   let units = "metric";
@@ -111,8 +114,6 @@ function getCurrentLocation(event) {
 let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", getCurrentLocation);
 
-//
-
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temperature");
@@ -122,7 +123,9 @@ function convertToFahrenheit(event) {
   temperature = Number(temperature);
   temperatureElement.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
 }
+
 let celsiusTemperature = null;
+
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temperature");
@@ -136,7 +139,7 @@ fahrenheit.addEventListener("click", convertToFahrenheit);
 
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", convertToCelsius);
-//
+
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#week-forecast");
