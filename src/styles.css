@@ -60,6 +60,10 @@ body {
   color: #68b9fc;
   border: 1px solid #68b9fc;
 }
+#city-search-input {
+  background: rgb(214 237 255);
+  border-color: #68b9fc;
+}
 
 .current-weather {
   background-color: rgb(214 237 255);
